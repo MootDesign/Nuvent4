@@ -1,3 +1,1 @@
 http://blog.vixre.co.uk/calculating-the-distance-between-a-set-of-postcodes-and-ranking-them-in-order/
-
-Is this working??
