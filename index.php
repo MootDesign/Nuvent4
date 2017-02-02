@@ -128,7 +128,7 @@
     <li onclick="window.location.href='#'">
       <img class="main-image" src="/img/banner/banner-v2woman.jpg" alt="">
       <img class="main-image-scaled" src="/img/banner/banner-v2woman-scaled.jpg" alt="">
-      <p class="caption caption-desktop">Slide Four test</p>
+      <p class="caption caption-desktop">Slide Four</p>
       <div class="medtronic-border"></div>
     </li>
   </ul>
