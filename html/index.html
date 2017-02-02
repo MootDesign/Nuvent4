@@ -1,0 +1,500 @@
+			<!DOCTYPE html>
+	<head>
+		<title>MDT Nuvent</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" href="css/LivIconsEvo.css">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDovnhsefsgMcKLLFD5rb9PC4bPWOSaGbI&callback=initMap" async defer></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/scrollreveal.min.js"></script>
+		<script type="text/javascript">
+			window.sr = ScrollReveal({ reset: true });
+		</script>
+		<script type="text/javascript">
+			  function navToggle() {
+			  	var height = $("#myNav").height();
+			  	if (height == "0") {
+			  		$(".navbar-nav li a").css("display", "none");
+			  		$("body").css("overflow", "hidden");
+			  		$(".navbar-default").css("background-color", "#000e46");
+			  		$(".navbar-collapse").css("box-shadow", "none");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#ffffff");
+			  		$(".shownormal").css("display", "none");
+			  		$(".showalt").css("display", "block");
+			  		$('body').bind('touchmove', function(e){e.preventDefault()});
+			   		document.getElementById("myNav").style.height = "100%";
+			   	}
+			   	else if (height > "0") {
+			   		document.getElementById("myNav").style.height = "0%";
+			  		$("body").css("overflow", "auto");
+			  		$(".navbar-default").css("background-color", "#ffffff");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#004b87");
+			  		$(".navbar-nav li a").css("display", "block");
+			  		$('body').unbind('touchmove');
+			  		$(".showalt").css("display", "none");
+					$(".shownormal").css("display", "block");
+			   	}
+			}
+		</script>
+		<script type="text/javascript">
+			  function updateToggle() {
+			  	var height = $("#getUpdates").height();
+			  	if (height == "0") {
+			  		$(".navbar-nav li a").css("display", "none");
+			  		$(".navbar-default").css("background-color", "#000e46");
+			  		$(".navbar-collapse").css("box-shadow", "none");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#ffffff");
+			  		$(".hidemobile").css("display", "none");
+			  		$(".showalt").css("display", "block");
+			  		$(".showalt").css("margin-top", "5px");
+			  		$(".showalt").css("position", "fixed");
+			  		$('body').bind('touchmove', function(e){e.preventDefault()});
+			   		document.getElementById("getUpdates").style.height = "100%";
+			   	}
+			   	else if (height > "0") {
+			   		document.getElementById("getUpdates").style.height = "0%";
+			  		$("body").css("overflow", "auto");
+			  		$(".navbar-default").css("background-color", "#ffffff");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#004b87");
+			  		$(".navbar-nav li a").css("display", "block");
+			  		$('body').unbind('touchmove');
+			  		$(".showalt").css("display", "none");
+			  		$(".hidemobile").css("display", "initial");
+					$(".shownormal").css("display", "block");
+			   	}
+			}
+		</script>
+	</head>
+		<body style="background: #ffffff;">
+	 	<div class="navbar navbar-default navbar-static-top" style="z-index: 10;">
+			<div class="container override-container">
+			<div style="display: inline-block">
+				<a href="/">
+					<img src="img/logo_rgb_png.png" class="showmobile shownormal" style="width: 220px; z-index: 2;">
+					<img src="img/logo_rgb_png_alt.png" class="showalt" style="width: 220px; display: none;z-index: 2;">
+				</a>
+			</div>
+					<div style="display: inline-block; float: right;">
+				<button class="navbar-toggle" onclick="navToggle()">
+					<div id="nav-icon3">
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					</div>
+				</button></div>
+				<div class="collapse navbar-collapse navHeaderCollapse navbar-top-style">
+					<a href="/"><img src="img/logo_rgb_png.png" id="logo" class="hidemobile" style="width: 220px; z-index: 2;"></a>
+					<script type="text/javascript">
+						$(function() {
+							$('#logo').addClass('fade-in');
+							$('.upper-top-links').addClass('fade-in');
+						});
+					</script>
+					<ul class="nav navbar-nav navbar-right upper-top-links" style="text-transform: uppercase; color: #8b8b8b !important;">
+						<li><br></li>
+						<li style="cursor: pointer"><a onclick="updateToggle()">get updates</a></li>
+						<li style=""><a href="contact_us.html#faqs">FAQ'S</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="collapse navbar-collapse navHeaderCollapse top-nav-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="menu1"><a class="last-in-fade" href="sinusitis.html">What is sinusitis</a></li>
+
+						<li class="menu2"><a href="treatment_options.html">Treatment options</a></li>
+
+						<li class="menu3"><a href="what_to_expect.html">What to expect</a></li>
+
+						<li class="menu4"><a href="find_a_doctor.html">Find a doctor</a></li>
+
+						<li class="menu5"><a href="contact_us.html">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(window).scroll(function() {
+				if ($(this).scrollTop() > 85) {
+						 $('.navbar-inverse').addClass('fix');
+						 $('.slick-slider').addClass('spacer');
+				} else {
+						 $('.navbar-inverse').removeClass('fix');
+						 $('.slick-slider').removeClass('spacer');
+				}
+			});
+		</script>
+			<!-- The overlay -->
+			<div id="myNav" class="overlay">
+			  <!-- Overlay content -->
+			  <div class="overlay-content container">
+			    <a href="sinusitis.html">What Is Sinusitis</a>
+			    <a href="treatment_options.html">Treatment Options</a>
+			    <a href="what_to_expect.html">What To Expect</a>
+			    <a href="contact_us.html">Contact Us</a>
+			    <div class="col-xs-6" style="background: #71c5e9; margin-top: 5%;">
+					<p onclick="updateToggle()" style="padding: 10px; color: #000e46; font-size: 16px; text-transform: uppercase;">Get Updates</p>
+			    </div>
+			    <div class="col-xs-6" style="background: #0085ca; margin-top: 5%;">
+					<p style="padding: 12px; color: #000e46; text-transform: uppercase;"><a href="find_a_doctor.html">Find a doctor</a></p>
+			    </div>
+			  </div>
+
+			</div>
+
+			<!-- The overlay -->
+			<div id="getUpdates" class="overlay2">
+			  <!-- Overlay content -->
+			  <div class="overlay-content2 container">
+			  	<div class="container override-container">
+			  		<div class="col-xs-9" style="padding-left: 0px;">
+			  			<p class="upper" style="font-size: 34px;">
+			    		<span class="uppertitle">get</span><br>
+			    		<span class="uppertitle">updates</span>
+			    		</p>
+			    		<p class="grid-text-body" style="margin-left: 0;">Please enter your email address<br> to receive future updates and information.</p>
+			    		<br>
+			    		<form style="color: #000">
+			    		<input type="email" name="email" placeholder="    Email" required="required" style="background: transparent; color: #fff !important; font-size: 18px;"><br><br>
+			    		<input type="checkbox" value="1" required="required">
+			    		<p style="color: #fff">*By checking this box and providing information, I understand and agree that my personal information is being collected by Medtronic and entered into a database for the purpose of communicating offers and specials related to Medtronic products, services and technological advancements.<br>
+			    		<button type="submit" class="btn btn-button btn-account" style="background: transparent; max-width: 120px; color: #ffffff">Submit</button>
+			    		</form>
+			    	</div>
+			    	<div class="col-xs-3">
+			    		<a href="javascript:void(0)" class="closebtn" onclick="updateToggle()">Close <span style="font-size: 30px;">&times;</span></a>
+			    	</div>
+			    </div>
+			  </div>
+
+			</div>
+			<div class="uselessclass"></div>
+			<div class="width_1680"></div>
+			<!--<div class="uselessclass"></div>-->
+
+			<style type="text/css">
+				.slick-arrow {
+					display: none !important;
+				}
+				.my-slides, .medtronic-border {
+					display: none;
+				}
+				.first-slide p  {
+					visibility: hidden;
+				}
+				.footer-inpage-nav {
+					display: none;
+				}
+				.menu1, .menu2, .menu3, .menu4, .menu5 {
+    				position: relative;
+    				top: -5em;
+    				opacity: 0;
+    				transition: all 2s ease-in-out;
+        			-webkit-transition: all 2s ease-in-out;
+        			-moz-transition: all 2s ease-in-out;
+        			-o-transition: all 2s ease-in-out;
+        			-ms-transition: all 2s ease-in-out;
+				}
+
+				/* SVG STYLES .svg-wrapper {
+				  background: transparent;
+				  position: relative;
+					max-width:940px;
+				  width: 100%;
+				  height: 412px;
+				  top: 16%;
+				  left: 11%; }
+				  .svg-wrapper svg {
+				    position: absolute;
+						top:0;
+						left:0;
+					 	display:block;}
+
+				.outline {
+				  width: 100%;
+				  height: 100%;
+				  stroke-dasharray: 3760;
+				  stroke-dashoffset: 3760;
+				  stroke-width: 18px;
+				  fill: transparent;
+				  stroke: #0f4b85;
+				  transition: stroke-dashoffset 2s, stroke-dasharray 2s; }
+
+				@keyframes dash {
+				  from {
+				    stroke-dashoffset: 1500; }
+				  to {
+				    stroke-dashoffset: 0; } }
+				.svg-wrapper:hover .outline {
+				  stroke-dashoffset: 0; } */
+
+			</style>
+			<div class="home-slider slider-all pad-bott-50">
+				  	<div class="first-slide">
+  					<img class="main-image" src="/img/banner/banner-v2girl.jpg" width="100%" class="">
+  					<img class="main-image-scaled" src="/img/banner/banner-v2girl-scaled.jpg" width="100%" class="">
+  					<img class="nuvent-logo" src="img/banner/nuVentLogo.png">
+  					<!--<p><span class="first-slide">finding your way</span><br><span style="color: #FEBC11; font-family: medtronic_bold;">to sinus relief</span></p>-->
+						<p class="first-slide-1"><span>finding your way</span></p><br><p class="first-slide-2"><span style="color: #FEBC11; font-family: medtronic_bold; ">to sinus relief</span></p>
+						<span class="medtronic-border"></span>
+  				</div>
+  				<div class="my-slides">
+  					<img class="main-image" src="/img/banner/banner- v2 family2b.jpg" width="100%" class="">
+  					<img class="main-image-scaled" src="/img/banner/banner- v2 family2b-scaled.jpg" width="100%" class="">
+  					<img class="nuvent-logo" src="img/banner/nuVentLogo.png">
+  					<p class="first-slide-1"><span>how close are you</span></p><br><p class="first-slide-2"><span style="color: #FEBC11; font-family: medtronic_bold; ">to feeling free again?</span></p>
+					<span class="medtronic-border"></span>
+  				</div>
+  				<div class="my-slides">
+  					<img class="main-image" src="img/banner/banner-v2bike.jpg" width="100%" class="">
+  					<img class="main-image-scaled" src="/img/banner/banner-v2bike-scaled.jpg" width="100%" class="">
+  					<img class="nuvent-logo" src="img/banner/nuVentLogo.png">
+					<p class="first-slide-1"><span>still searching</span></p><br><p class="first-slide-2"><span style="color: #FEBC11; font-family: medtronic_bold; ">for relief?</span></p>
+					<span class="medtronic-border"></span>
+  				</div>
+  				<div class="my-slides">
+  					<img class="main-image" src="/img/banner/banner-v2woman.jpg" width="100%">
+  					<img class="main-image-scaled" src="/img/banner/banner-v2woman-scaled.jpg" width="100%">
+  					<img class="nuvent-logo" src="img/banner/nuVentLogo.png">
+  					<p class="first-slide-1"><span>finding your way</span></p><br><p class="first-slide-2"><span style="color: #FEBC11; font-family: medtronic_bold; ">to sinus relief</span></p>
+						<span class="medtronic-border"></span>
+  				</div>
+			</div>
+			<!--<div class="svg-wrapper">
+			  <svg viewBox="0 0 940 412" xmlns="http://www.w3.org/2000/svg">
+			    <rect class="outline" />
+			  </svg>
+			</div>-->
+			<div class="container override-container paragraph first-container">
+				<div class="col-sm-9 paragraph-reveal">
+					<p><span class="bold-heading bold-heading-light">Stuck with chronic rhinosinusitis pain and suffering?</span></p>
+					<p><span class="normal-text">If you have chronic sinusitis, you know that symptoms like
+					headaches, ongoing facial pain and pressure, and breathing
+					problems can drag down your daily life.</span></p>
+				</div>
+			</div>
+
+			<!-- DESKTOP GRID VIDEW -->
+
+			<div class="container-full-width hide-desktop-grid medtronic-light-bg" style="margin-bottom: 60px;">
+				<div class="container override-container" style="color: #ffffff">
+  					<a href="sinusitis.html#sinusitis_link"><div class="col-md-3 md-override grid-section-1 button-div3 box-left-reveal">
+    					<p class="upper"><span class="uppertitle">what is</span><br><span class="lowertitle">sinusitis</span></p>
+						<p class="grid-text-body">Learn more about sinusitis and related symptoms</p>
+						<p><button class="btn btn-button btn-product"> Learn More</button></p>
+  					</div></a>
+ 					 <a href="treatment_options.html#treatment_options"><div class="col-md-3 md-override grid-section-2 button-div box-center-reveal">
+    					<p class="upper"><span class="uppertitle">Treatment</span><br><span class="lowertitle">options</span></p>
+						<p class="grid-text-body"> Learn about treatment options you may not have tried yet.</p>
+						<p><button class="btn btn-button btn-account"> Learn More</button></p>
+  					</div></a>
+  					<a href="treatment_options.html#balloon"><div class="col-md-3 md-override grid-section-3 button-div3 box-center-reveal">
+						<p class="upper"><span class="uppertitle">Balloon</span><br><span class="lowertitle">sinuplasty</span></p>
+						<p class="grid-text-body">Consider the Balloon Sinuplasty.</p>
+						<p><button style="margin-top: 45px;" class="btn btn-button btn-product"> Learn More</button></p>
+  					</div></a>
+  					<a href="find_a_doctor.html"><div class="col-md-3 md-override button-div grid-section-4 box-right-reveal">
+    					<p class="upper"><span class="uppertitle">Ask your doctor</span><br><span class="lowertitle" >about nuvent<sup>&reg;</sup></span></p>
+						<p class="grid-text-body">Help your doctor precisely <br> unblock sinuses.</p>
+						<p><button class="btn btn-button btn-account"> Learn More</button></p>
+					</div></a>
+				</div>
+			</div>
+
+			<!-- MOIBLE GRID VIEW -->
+
+			 <!--Row One-->
+			 <div class="show-mobile-grid">
+  				<div class="col-sm-12 show-mobile-grid button-div" id="grid-section-1-mobile" align="center">
+  				  <div class="row pad-top-50">
+  				    <p style="text-transform: uppercase; line-height: 21px;"><span style="">Treatment</span><br><span style="">options</span></p>
+					<p style=""> Learn about treatment options you may not have tried yet.</p>
+					<p><button class="btn btn-button btn-account"> Learn More</button></p>
+  				  </div>
+  				</div>
+				<!-- Row Two -->
+  				<div class="col-sm-12 show-mobile-grid button-div3" id="grid-section-3-mobile" align="center">
+  				  <div class="row pad-top-50">
+  				    <p style="text-transform: uppercase; line-height: 21px;"><span style="">Balloon</span><br><span style="">sinuplasty</span></p>
+					<p style="">Consider the Balloon Sinuplasty.</p>
+					<p><button style="" class="btn btn-button btn-product"> Learn More</button></p>
+  				  </div>
+  				</div>
+  				<!-- Row Three -->
+  				<div class="col-sm-12 show-mobile-grid button-div" id="grid-section-4-mobile" align="center">
+  				  <div class="row pad-top-50">
+  				 <p style="text-transform: uppercase;"><span style="">Ask your doctor <br>about nuvent<sup>&reg;</sup></span></p>
+							<p style="">a solution designed to help your doctor precisely locate and unblock sinuses.</p>
+							<p><button class="btn btn-button btn-account"> Learn More</button></p>
+  				  </div>
+  				</div>
+  			</div>
+
+			<div class="container override-container paragraph">
+				<div class="col-sm-9 safety-information paragraph-reveal">
+					<p><span class="bold-heading">Safety Information</span>
+					<span class="normal-text">Balloon sinus surgery has associated risks, including tissue
+					trauma, bleeding,<br> infection, and possible ophthalmic injury. This
+					therapy is not for everyone.<br> Information on this site should not be
+					used as a substitute for talking with your<br> doctor. Always talk
+					with your doctor about diagnosis and treatment information.</span></p>
+				</div>
+			</div>
+
+			<div class="container override-container references">
+				<div class="col-sm-9 paragraph-reveal">
+					<p><span class="bold-heading no-bottom-margin">References</span>
+					<span class="normal-text sources-ref"><sup>1</sup>American Rhinologic Society. Adult Sinusitis.<br>
+					http://care.american-rhinologic.org/adult_sinusitis.<br>
+					Accessed September 16, 2015.
+					</span>
+					</p>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('.home-slider').slick({
+  						slidesToShow: 1,
+  						slidesToScroll: 1,
+  						autoplay: true,
+  						pauseOnFocus: false,
+  						pauseOnHover: false,
+  						autoplaySpeed: 6000,
+						fade: true,
+  						cssEase: 'linear'
+	  				});
+				setTimeout(function() {
+	  				$('.menu1').css("opacity", 1).css("top", "0em").css("transition", "all 1s linear");
+	  			}, 50);
+	  			setTimeout(function() {
+	  				$('.menu2').css("opacity", 1).css("top", "0em").css("transition", "all 1s linear");
+	  			}, 300);
+	  			setTimeout(function() {
+	  				$('.menu3').css("opacity", 1).css("top", "0em").css("transition", "all 1s linear");
+	  			}, 550);
+	  			setTimeout(function() {
+	  				$('.menu4').css("opacity", 1).css("top", "0em").css("transition", "all 1s linear");
+	  			}, 800);
+	  			setTimeout(function() {
+	  				$('.menu5').css("opacity", 1).css("top", "0em").css("transition", "all 1s linear");
+	  			}, 1050);
+	  			});
+			</script>
+
+				<style type="text/css">
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				.webkit-fix {
+					position: relative;
+					top:3px; }
+			}
+		</style>
+		<div class="container-full-width medtronic-light-bg footer-inpage-nav">
+			<div class="container override-container mob-no-padd" style="color: #ffffff;">
+				<a href="<?=$heading5link?>"><div class="col-sm-3 box-left-reveal" style="height: 100px;background: #001E46; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading5?></p>
+				</div></a>
+				<a href="<?=$heading6link?>"><div class="col-sm-3 box-center-reveal" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading6?></p>
+				</div></a>
+				<a href="<?=$heading7link?>"><div class="col-sm-3 box-center-reveal" style="height: 100px;background: #001E46; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading7?></p>
+				</div></a>
+				<a href="<?=$heading8link?>"><div class="col-sm-3 box-right-reveal mob-false" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading8?></p>
+				</div></a>
+				<a href="<?=$heading8link?>"><div class="col-sm-3 mob-true box-center-reveal" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading8?></p>
+				</div></a>
+			</div>
+		</div>
+		<div class="navbar navbar-default navbar-static-bottom navbar-style-bottom">
+			<div class="container-full-width footer-part1">
+					<a href="find_a_doctor.html"><p class="doctor-message foo" align="center" style="">Find a Doctor for your sinusitis needs <span class="webkit-fix" style="font-size: 25px; display:inline-block; vertical-align: center;">&rarr;</span></p></a>
+			</div>
+			<div class="container override-container" style="color: #ffffff; min-height: 140px; padding-top: 50px;">
+				<div class="row">
+					<div class="col-md-5 footer-left-side">
+						<p>&copy;2016 Medtronic</p>
+					</div>
+					<div class="col-md-7 pull-right footer-links footer-right-side" align="right">
+					<ul><li>Terms of use</li> </ul>
+					<!--<ul><li>Title</li> </ul>
+					<ul><li>Contact</li></ul>-->
+					<ul><li class="secondlast">Privacy Statement</li> </ul>
+					<ul style="padding-left:0px; margin-right:50px;"><li style="margin-right: 40px;"><img src="img/facebook-logo.png" style="width: 35px; padding-right: 10px; display: none;">
+					<img src="img/twitter-logo.png" style="width: 35px; padding-right: 10px;display: none;">
+					</li> </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function(){
+					$('.static-slider').slick({
+  						slidesToShow: 1,
+  						slidesToScroll: 0,
+  						autoplay: false,
+  						pauseOnFocus: false,
+  						pauseOnHover: false,
+						fade: false,
+						mobileFirst: true,
+  						cssEase: 'linear'
+	  				});
+	  			});
+		</script>
+		<script src="js/jquery.lazyload.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/moot-lazy.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/tools/snap.svg-min.js"></script>
+        <script src="js/tools/TweenMax.min.js"></script>
+        <script src="js/tools/DrawSVGPlugin.min.js"></script>
+        <script src="js/tools/MorphSVGPlugin.min.js"></script>
+        <script src="js/tools/verge.min.js"></script>
+        <script src="js/LivIconsEvo.defaults.js"></script>
+        <script src="js/LivIconsEvo.min.js"></script>
+				<script type="text/javascript">
+						sr.reveal('.bar');
+						sr.reveal('.foo', { origin: 'left', distance: '100px', duration: 800, reset:false });
+						sr.reveal('.box-left-reveal', {origin: 'left', distance: '100px', delay: 900, duration: 800, reset:false});
+						sr.reveal('.box-right-reveal', {origin: 'right', distance: '100px', delay:900, duration: 800, reset:false});
+						sr.reveal('.box-center-reveal', {origin: 'bottom', distance: '100px', delay:300, duration: 800, reset:false});
+						sr.reveal('.paragraph-reveal', {origin: 'bottom', distance:'100px', duration: 1000, scale:1, viewFactor:0.4, reset:false});
+						sr.reveal('.four-arrow-reveal', {origin: 'left', distance: '100px', duration:800, scale:1, reset:false, afterReveal: function (domEl) {
+								$(".flow-grid-1").css({ 'width': '0px'});
+		        		$(".flow-grid-2").css({ 'width': '0px'});
+		        		$(".flow-grid-3").css({ 'width': '0px'});
+		        		$(".flow-grid-4").css({ 'width': '0px'});
+								setTimeout(function () { $(".flow-grid-1").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-2").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-3").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-4").animate({ opacity: "1" }, 1500); }, 50);
+		        		setTimeout(function () { $(".flow-grid-1").animate({ width: "100%" }, 1500); }, 100);
+		        		setTimeout(function () { $(".flow-grid-2").animate({ width: "100%" }, 1500); }, 350);
+		        		setTimeout(function () { $(".flow-grid-3").animate({ width: "100%" }, 1500); }, 600);
+		        		setTimeout(function () { $(".flow-grid-4").animate({ width: "100%" }, 1500); }, 850);} });
+						sr.reveal('.two-arrow-reveal', {origin: 'left', distance: '100px', delay:300, duration:800, scale:1, reset:false, afterReveal: function (domEl) {
+								$(".arrow1").css({ 'width': '0px' });
+								$(".arrow2").css({ 'width': '0px' });
+								setTimeout(function () { $(".arrow1").animate({ width: "100%" }, 1000); }, 50);
+								setTimeout(function () { $(".arrow2").animate({ width: "100%" }, 1500); }, 50);
+								setTimeout(function() { $('.text-1').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 400);
+								setTimeout(function() { $('.text-2').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 800);
+								setTimeout(function() { $('.text-3').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 1200);
+								setTimeout(function() { $('.text-4').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 1600);} });
+				</script>
+	</body>
+</html>
+

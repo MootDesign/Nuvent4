@@ -1,0 +1,666 @@
+			<!DOCTYPE html>
+	<head>
+		<title>MDT Nuvent</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" href="css/LivIconsEvo.css">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDovnhsefsgMcKLLFD5rb9PC4bPWOSaGbI&callback=initMap" async defer></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/scrollreveal.min.js"></script>
+		<script type="text/javascript">
+			window.sr = ScrollReveal({ reset: true });
+		</script>
+		<script type="text/javascript">
+			  function navToggle() {
+			  	var height = $("#myNav").height();
+			  	if (height == "0") {
+			  		$(".navbar-nav li a").css("display", "none");
+			  		$("body").css("overflow", "hidden");
+			  		$(".navbar-default").css("background-color", "#000e46");
+			  		$(".navbar-collapse").css("box-shadow", "none");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#ffffff");
+			  		$(".shownormal").css("display", "none");
+			  		$(".showalt").css("display", "block");
+			  		$('body').bind('touchmove', function(e){e.preventDefault()});
+			   		document.getElementById("myNav").style.height = "100%";
+			   	}
+			   	else if (height > "0") {
+			   		document.getElementById("myNav").style.height = "0%";
+			  		$("body").css("overflow", "auto");
+			  		$(".navbar-default").css("background-color", "#ffffff");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#004b87");
+			  		$(".navbar-nav li a").css("display", "block");
+			  		$('body').unbind('touchmove');
+			  		$(".showalt").css("display", "none");
+					$(".shownormal").css("display", "block");
+			   	}
+			}
+		</script>
+		<script type="text/javascript">
+			  function updateToggle() {
+			  	var height = $("#getUpdates").height();
+			  	if (height == "0") {
+			  		$(".navbar-nav li a").css("display", "none");
+			  		$(".navbar-default").css("background-color", "#000e46");
+			  		$(".navbar-collapse").css("box-shadow", "none");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#ffffff");
+			  		$(".hidemobile").css("display", "none");
+			  		$(".showalt").css("display", "block");
+			  		$(".showalt").css("margin-top", "5px");
+			  		$(".showalt").css("position", "fixed");
+			  		$('body').bind('touchmove', function(e){e.preventDefault()});
+			   		document.getElementById("getUpdates").style.height = "100%";
+			   	}
+			   	else if (height > "0") {
+			   		document.getElementById("getUpdates").style.height = "0%";
+			  		$("body").css("overflow", "auto");
+			  		$(".navbar-default").css("background-color", "#ffffff");
+			  		$("#nav-icon3").toggleClass('open');
+			  		$("#nav-icon3 span").css("background", "#004b87");
+			  		$(".navbar-nav li a").css("display", "block");
+			  		$('body').unbind('touchmove');
+			  		$(".showalt").css("display", "none");
+			  		$(".hidemobile").css("display", "initial");
+					$(".shownormal").css("display", "block");
+			   	}
+			}
+		</script>
+	</head>
+		<body style="background: #ffffff;">
+	 	<div class="navbar navbar-default navbar-static-top" style="z-index: 10;">
+			<div class="container override-container">
+			<div style="display: inline-block">
+				<a href="/">
+					<img src="img/logo_rgb_png.png" class="showmobile shownormal" style="width: 220px; z-index: 2;">
+					<img src="img/logo_rgb_png_alt.png" class="showalt" style="width: 220px; display: none;z-index: 2;">
+				</a>
+			</div>
+					<div style="display: inline-block; float: right;">
+				<button class="navbar-toggle" onclick="navToggle()">
+					<div id="nav-icon3">
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					</div>
+				</button></div>
+				<div class="collapse navbar-collapse navHeaderCollapse navbar-top-style">
+					<a href="/"><img src="img/logo_rgb_png.png" id="logo" class="hidemobile" style="width: 220px; z-index: 2;"></a>
+					<script type="text/javascript">
+						$(function() {
+							$('#logo').addClass('fade-in');
+							$('.upper-top-links').addClass('fade-in');
+						});
+					</script>
+					<ul class="nav navbar-nav navbar-right upper-top-links" style="text-transform: uppercase; color: #8b8b8b !important;">
+						<li><br></li>
+						<li style="cursor: pointer"><a onclick="updateToggle()">get updates</a></li>
+						<li style=""><a href="contact_us.html#faqs">FAQ'S</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="collapse navbar-collapse navHeaderCollapse top-nav-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="menu1"><a class="last-in-fade" href="sinusitis.html">What is sinusitis</a></li>
+
+						<li class="menu2"><a href="treatment_options.html">Treatment options</a></li>
+
+						<li class="menu3"><a href="what_to_expect.html">What to expect</a></li>
+
+						<li class="menu4"><a href="find_a_doctor.html">Find a doctor</a></li>
+
+						<li class="menu5"><a href="contact_us.html">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(window).scroll(function() {
+				if ($(this).scrollTop() > 85) {
+						 $('.navbar-inverse').addClass('fix');
+						 $('.slick-slider').addClass('spacer');
+				} else {
+						 $('.navbar-inverse').removeClass('fix');
+						 $('.slick-slider').removeClass('spacer');
+				}
+			});
+		</script>
+			<!-- The overlay -->
+			<div id="myNav" class="overlay">
+			  <!-- Overlay content -->
+			  <div class="overlay-content container">
+			    <a href="sinusitis.html">What Is Sinusitis</a>
+			    <a href="treatment_options.html">Treatment Options</a>
+			    <a href="what_to_expect.html">What To Expect</a>
+			    <a href="contact_us.html">Contact Us</a>
+			    <div class="col-xs-6" style="background: #71c5e9; margin-top: 5%;">
+					<p onclick="updateToggle()" style="padding: 10px; color: #000e46; font-size: 16px; text-transform: uppercase;">Get Updates</p>
+			    </div>
+			    <div class="col-xs-6" style="background: #0085ca; margin-top: 5%;">
+					<p style="padding: 12px; color: #000e46; text-transform: uppercase;"><a href="find_a_doctor.html">Find a doctor</a></p>
+			    </div>
+			  </div>
+
+			</div>
+
+			<!-- The overlay -->
+			<div id="getUpdates" class="overlay2">
+			  <!-- Overlay content -->
+			  <div class="overlay-content2 container">
+			  	<div class="container override-container">
+			  		<div class="col-xs-9" style="padding-left: 0px;">
+			  			<p class="upper" style="font-size: 34px;">
+			    		<span class="uppertitle">get</span><br>
+			    		<span class="uppertitle">updates</span>
+			    		</p>
+			    		<p class="grid-text-body" style="margin-left: 0;">Please enter your email address<br> to receive future updates and information.</p>
+			    		<br>
+			    		<form style="color: #000">
+			    		<input type="email" name="email" placeholder="    Email" required="required" style="background: transparent; color: #fff !important; font-size: 18px;"><br><br>
+			    		<input type="checkbox" value="1" required="required">
+			    		<p style="color: #fff">*By checking this box and providing information, I understand and agree that my personal information is being collected by Medtronic and entered into a database for the purpose of communicating offers and specials related to Medtronic products, services and technological advancements.<br>
+			    		<button type="submit" class="btn btn-button btn-account" style="background: transparent; max-width: 120px; color: #ffffff">Submit</button>
+			    		</form>
+			    	</div>
+			    	<div class="col-xs-3">
+			    		<a href="javascript:void(0)" class="closebtn" onclick="updateToggle()">Close <span style="font-size: 30px;">&times;</span></a>
+			    	</div>
+			    </div>
+			  </div>
+
+			</div>
+			<div class="uselessclass"></div>
+			<div class="width_1680"></div>
+			<!--<div class="uselessclass"></div>-->
+
+			<style type="text/css">
+				.slick-arrow {
+					display: none !important;
+				}
+				.footer-inpage-nav {
+					display: none;
+				}
+
+				.toggle-wrap {
+				 	position: relative;
+				 	width:100%; }
+
+				.tab-header {
+				 	width:100%;
+				 	height:50px;
+					margin-bottom:20px;
+				 	font-size:14px;
+					border-bottom:1px solid #b1b0b2; }
+
+				.map-key {
+				 	float:right;
+					margin-top:10px;
+				 	max-width:345px;
+				 	width:100%;
+				 	opacity:0;
+				 	transition: opacity 1s ease-in-out; }
+				.map-key.active {
+				 	opacity:1;
+					transition: opacity 1s ease-in-out; }
+					.map-key div {
+					 	float:left;
+					 	width:50%; }
+						.map-key div img {
+						 	margin-right:15px; }
+
+				.map-view, .list-view {
+				 	cursor: pointer;
+				 	float:left;
+					padding:5px 0 0 12px;
+					height:50px;
+					width:120px;
+				 	border:1px solid #004b87; }
+					.map-view.active, .list-view.active {
+					 	color:#FFFFFF;
+					 	background:#004b87; }
+				.map-view {
+				 	border-bottom:none; }
+				.list-view {
+				 	border-bottom:none;
+				 	border-left:none; }
+
+				.map-view-wrap, .list-view-wrap {
+				 	width:100%;
+					display:block;
+					position: relative;
+				 	opacity:1;
+				 	transition: opacity 1s ease-in-out; }
+				.map-view-wrap.off, .list-view-wrap.off {
+				 	opacity: 0;
+					z-index: -10;
+				 	transition: opacity 1s ease-in-out; }
+				.list-view-wrap {
+					position: relative;/*Temp fix for list view .. needs refining */
+				 	top:-20em;
+				 	/*position: absolute;
+				 	top:0px;*/
+				 	left:0px; }
+
+				.map {
+				 	width:100%;
+				 	height:600px; }
+
+				 @media screen and (max-width: 800px) {	
+					.map {
+						width: 100%;
+						height: 300px;
+					}
+				}
+			</style>
+			<div class="static-slider slider-all pad-bott-50">
+  				<div>
+  					<img class="main-image" src="/img/banner/banner-v2 doctor.jpg" width="100%" class="">
+  					<img class="main-image-scaled" src="/img/banner/banner-v2doctor-scaled.jpg" width="100%" class="">
+  					<img class="nuvent-logo" src="img/banner/nuVentLogo.png">
+  					<p class="first-slide-1"><span>finding your way</span></p><br><p class="first-slide-2"><span style="color: #FEBC11; font-family: medtronic_bold;">to sinus relief</span></p>
+					<span class="medtronic-border"></span>
+  				</div>
+			</div>
+
+			<div class="container override-container paragraph">
+			<p class="paragraph-reveal" style="font-size: 28px; color: #0f82c5; margin-bottom: 25px;">NuVent<sup>&reg;</sup> Doctors</p>
+			<div class="tab-header">
+				<div class="map-view active">
+					<div class="livicon-evo icon" style="float:left; margin-right:5px;" data-options="name:map.svg; style: lines; size: 30px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+						Map View</div>
+					<div class="list-view">
+					<div class="livicon-evo icon" style="float:left; margin-right:5px;" data-options="name:list.svg; style: lines; size: 30px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+						List View</div>
+					<div class="map-key active">
+						<div class="orange-marker"><img src="/img/orange-marker.png">NuVent Doctor</div>
+						<div class="blue-marker"><img src="/img/blue-marker.png">General Practitioner</div>
+					</div>
+			</div>
+			<script type="text/javascript">
+				$(function() {
+					$(".map-view").click(function() {
+						$(".map-view-wrap").removeClass('off');
+						$(".list-view-wrap").addClass('off');
+						$(".map-view").addClass('active');
+						$(".list-view").removeClass('active');
+						$(".map-key").addClass('active');
+					});
+					$(".list-view").click(function() {
+						$(".map-view-wrap").addClass('off');
+						$(".list-view-wrap").removeClass('off');
+						$(".map-view").removeClass('active');
+						$(".list-view").addClass('active');
+						$(".map-key").removeClass('active');
+					});
+				});
+			</script>
+			<div class="toggle-wrap">
+				<div class="container override-container map-view-wrap">
+					<div class="col-md-12" style="padding:0;">
+						<!--<input type="button" id="reset-state" value="reset" />-->
+						<div id="map" class="map"></div>
+						<script type="text/javascript">
+				      var map;
+							var gmarkers1 = [];
+							var hospitals1 = [];
+							var infowindow = new google.maps.InfoWindow({ content: '' });
+							var iconSrc = {};
+
+							hospitals1 = [
+								['0', 'Great Ormond Street Hospital', 51.5225023, -0.1229721, 'south'],
+								['1', 'Leicester Royal Infirmary', 52.6274712, -1.1387857, 'south'],
+								['2', 'Manchester Royal Infirmary', 53.4626882, -2.2289121, 'north'],
+								['3', 'Birmingham City Hospital', 52.4893936, -1.9337576, 'south'],
+								['4', 'Leeds General Infirmary', 53.8028354, -1.5539993, 'north'],
+								['5', 'Sunderland Royal Hospital', 54.9025716, -1.4110243, 'north']	];
+
+							iconSrc['south'] = 'http://nuvent2.mootdigital.com/img/blue-marker.png';
+							iconSrc['north'] = 'http://nuvent2.mootdigital.com/img/orange-marker.png';
+
+					      function initialize() {
+									var center = new google.maps.LatLng(53.4171668, -2.8075969);
+							    var mapOptions = {
+							        zoom: 6,
+							        center: center,
+											mapTypeControl: false,
+											styles: [
+											  {
+											    "featureType": "road",
+											    "elementType": "geometry",
+											    "stylers": [
+											      { "color": "#b9d9eb" }
+											    ]
+											  },{
+											    "elementType": "labels.text.fill",
+											    "stylers": [
+											      { "color": "#004b87" }
+											    ]
+											  },{
+											    "featureType": "landscape",
+											    "stylers": [
+											      { "color": "#e7eff4" }
+											    ]
+											  },{
+											    "featureType": "poi",
+											    "elementType": "geometry",
+											    "stylers": [
+											      { "color": "#c2c5c5" }
+											    ]
+											  },{
+											    "elementType": "labels.text.stroke",
+											    "stylers": [
+											      { "color": "#FFFFFF" }
+											    ]
+											  },{
+											    "elementType": "labels.icon",
+											    "stylers": [
+											      { "visibility": "off" }
+											    ]
+											  },{
+											    "featureType": "transit.line",
+											    "stylers": [
+											      { "color": "#ececec" }
+											    ]
+											  },{
+											    "elementType": "labels.text.fill",
+											    "stylers": [
+											      { "color": "#888B8D" }
+											    ]
+											  },{
+											  },{
+											    "featureType": "water",
+											    "stylers": [
+											      { "color": "#adc5d8" }
+											    ]
+											  }
+											]
+					        };
+
+									map = new google.maps.Map(document.getElementById('map'), mapOptions);
+									    for (i = 0; i < hospitals1.length; i++) {
+									        addMarker(hospitals1[i]); }
+
+										}
+
+								function addMarker(marker) {
+											var revert = new google.maps.LatLng(53.4171668, -2.8075969);
+										    var category = marker[4];
+										    var title = marker[1];
+										    var pos = new google.maps.LatLng(marker[2], marker[3]);
+										    var content = marker[1];
+
+										    marker1 = new google.maps.Marker({
+										        title: title,
+										        position: pos,
+										        category: category,
+										        map: map,
+														icon: iconSrc[hospitals1[i][4]]
+										    });
+
+										    gmarkers1.push(marker1);
+
+										    // Marker click listener
+										    google.maps.event.addListener(marker1, 'click', (function (marker1, content) {
+										        return function () {
+										            console.log('Gmarker 1 gets pushed');
+										            infowindow.setContent(content);
+										            infowindow.open(map, marker1);
+										            map.panTo(this.getPosition());
+										            map.setZoom(15);
+										        }
+										    })(marker1, content));
+
+										    google.maps.event.addListener(infowindow,'closeclick',function(){
+   											console.log('Gmarker 1 gets closed');
+   											map.panTo(revert);
+   											map.setZoom(6);
+   											// then, remove the infowindows name from the array
+											});
+										}
+
+									filterMarkers = function (category) {
+								    for (i = 0; i < hospitals1.length; i++) {
+								        marker = gmarkers1[i];
+								        // If is same category or category not picked
+								        if (marker.category == category || category.length === 0) {
+								            marker.setVisible(true);
+								        }
+								        // Categories don't match
+								        else {
+								            marker.setVisible(false);
+								        }
+								    }
+								}
+								// Init map
+								initialize();
+				    </script>
+					</div>
+				</div>
+				<div class="list-view-wrap off">
+				<div class="container override-container" style="border-bottom: 1px solid #b1b0b2; padding-bottom: 60px; margin-bottom: 50px;">
+					<div class="col-md-6">
+						<span class="bold-heading">Dr. J. Michael King</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">Peak Ear Nose Throat and Voice Center</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">1030 Johnson Rd., 403 Summit</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">Blvd Suite 204 Broomfield CO 80021, </span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">Golden, CO 80401</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">(720) 401-2139</span>
+					</div>
+					<div class="col-md-6 contact-details" style="font-size: 17px; color: #b1b0b2;">
+						<div class="col-xs-2 call">
+						<div class="call-1"><div class="livicon-evo icon" style="" data-options="name: phone-alt.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Call</div>
+						</div>
+						<div class="col-xs-2 email">
+						<a href="MailTO:test@example.com"><div class="livicon-evo icon" style="" data-options="name: morph-envelope.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Email</a>
+						</div>
+						<div class="col-xs-2 web-link">
+						<a href="#"><div class="livicon-evo icon" style="" data-options="name:globe.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Website</a>
+						</div>
+						<div class="col-xs-2 directions">
+						<div class="directions-1"><div class="livicon-evo icon" style="" data-options="name:map.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Directions</div>
+						</div>
+						<div class="col-md-12 extra-info" style="margin-top: 50px; display: none;"></div>
+					</div>
+				</div>
+				<div class="container override-container" style="border-bottom: 1px solid #b1b0b2; padding-bottom: 60px; margin-bottom: 50px;">
+					<div class="col-md-6">
+						<span class="bold-heading">Dr. Michael Vidas</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">Premier ENT</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">1601 E. 19th Ave Suite 4000,</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">Denver, CO 80218</span>
+						<span class="normal-heading" style="font-size: 21px; line-height:20px; width:100%; float:left; margin-bottom:5px;">(303) 832-0860</span>
+					</div>
+					<div class="col-md-6 contact-details" style="font-size: 17px; color: #b1b0b2;">
+						<div class="col-xs-2 call">
+						<div class="call-1"><div class="livicon-evo icon" style="" data-options="name: phone-alt.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Call</div>
+						</div>
+						<div class="col-xs-2 email">
+						<a href="MailTO:test@example.com"><div class="livicon-evo icon" style="" data-options="name: morph-envelope.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Email</a>
+						</div>
+						<div class="col-xs-2 web-link">
+						<a href="#"><div class="livicon-evo icon" style="" data-options="name:globe.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Website</a>
+						</div>
+						<div class="col-xs-2 directions">
+						<div class="directions-1"><div class="livicon-evo icon" style="" data-options="name:map.svg; style: lines; size: 60px; strokeColorAlt: #ffffff; fillColor: #07cdff; drawOnViewport: true"></div>
+							Directions</div>
+						</div>
+						<div class="col-md-12 extra-info" style="margin-top: 50px; display: none;"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+
+
+
+				<style type="text/css">
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				.webkit-fix {
+					position: relative;
+					top:3px; }
+			}
+		</style>
+		<div class="container-full-width medtronic-light-bg footer-inpage-nav">
+			<div class="container override-container mob-no-padd" style="color: #ffffff;">
+				<a href="<?=$heading5link?>"><div class="col-sm-3 box-left-reveal" style="height: 100px;background: #001E46; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading5?></p>
+				</div></a>
+				<a href="<?=$heading6link?>"><div class="col-sm-3 box-center-reveal" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading6?></p>
+				</div></a>
+				<a href="<?=$heading7link?>"><div class="col-sm-3 box-center-reveal" style="height: 100px;background: #001E46; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading7?></p>
+				</div></a>
+				<a href="<?=$heading8link?>"><div class="col-sm-3 box-right-reveal mob-false" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading8?></p>
+				</div></a>
+				<a href="<?=$heading8link?>"><div class="col-sm-3 mob-true box-center-reveal" style="height: 100px;background: #0085CA; line-height: 21px; text-transform: uppercase;">
+					<p style="padding: 20px; font-family: medtronic_bold;"><?=$heading8?></p>
+				</div></a>
+			</div>
+		</div>
+		<div class="navbar navbar-default navbar-static-bottom navbar-style-bottom">
+			<div class="container-full-width footer-part1">
+					<a href="find_a_doctor.html"><p class="doctor-message foo" align="center" style="">Find a Doctor for your sinusitis needs <span class="webkit-fix" style="font-size: 25px; display:inline-block; vertical-align: center;">&rarr;</span></p></a>
+			</div>
+			<div class="container override-container" style="color: #ffffff; min-height: 140px; padding-top: 50px;">
+				<div class="row">
+					<div class="col-md-5 footer-left-side">
+						<p>&copy;2016 Medtronic</p>
+					</div>
+					<div class="col-md-7 pull-right footer-links footer-right-side" align="right">
+					<ul><li>Terms of use</li> </ul>
+					<!--<ul><li>Title</li> </ul>
+					<ul><li>Contact</li></ul>-->
+					<ul><li class="secondlast">Privacy Statement</li> </ul>
+					<ul style="padding-left:0px; margin-right:50px;"><li style="margin-right: 40px;"><img src="img/facebook-logo.png" style="width: 35px; padding-right: 10px; display: none;">
+					<img src="img/twitter-logo.png" style="width: 35px; padding-right: 10px;display: none;">
+					</li> </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function(){
+					$('.static-slider').slick({
+  						slidesToShow: 1,
+  						slidesToScroll: 0,
+  						autoplay: false,
+  						pauseOnFocus: false,
+  						pauseOnHover: false,
+						fade: false,
+						mobileFirst: true,
+  						cssEase: 'linear'
+	  				});
+	  			});
+		</script>
+		<script src="js/jquery.lazyload.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/moot-lazy.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/tools/snap.svg-min.js"></script>
+        <script src="js/tools/TweenMax.min.js"></script>
+        <script src="js/tools/DrawSVGPlugin.min.js"></script>
+        <script src="js/tools/MorphSVGPlugin.min.js"></script>
+        <script src="js/tools/verge.min.js"></script>
+        <script src="js/LivIconsEvo.defaults.js"></script>
+        <script src="js/LivIconsEvo.min.js"></script>
+				<script type="text/javascript">
+						sr.reveal('.bar');
+						sr.reveal('.foo', { origin: 'left', distance: '100px', duration: 800, reset:false });
+						sr.reveal('.box-left-reveal', {origin: 'left', distance: '100px', delay: 900, duration: 800, reset:false});
+						sr.reveal('.box-right-reveal', {origin: 'right', distance: '100px', delay:900, duration: 800, reset:false});
+						sr.reveal('.box-center-reveal', {origin: 'bottom', distance: '100px', delay:300, duration: 800, reset:false});
+						sr.reveal('.paragraph-reveal', {origin: 'bottom', distance:'100px', duration: 1000, scale:1, viewFactor:0.4, reset:false});
+						sr.reveal('.four-arrow-reveal', {origin: 'left', distance: '100px', duration:800, scale:1, reset:false, afterReveal: function (domEl) {
+								$(".flow-grid-1").css({ 'width': '0px'});
+		        		$(".flow-grid-2").css({ 'width': '0px'});
+		        		$(".flow-grid-3").css({ 'width': '0px'});
+		        		$(".flow-grid-4").css({ 'width': '0px'});
+								setTimeout(function () { $(".flow-grid-1").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-2").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-3").animate({ opacity: "1" }, 1500); }, 50);
+								setTimeout(function () { $(".flow-grid-4").animate({ opacity: "1" }, 1500); }, 50);
+		        		setTimeout(function () { $(".flow-grid-1").animate({ width: "100%" }, 1500); }, 100);
+		        		setTimeout(function () { $(".flow-grid-2").animate({ width: "100%" }, 1500); }, 350);
+		        		setTimeout(function () { $(".flow-grid-3").animate({ width: "100%" }, 1500); }, 600);
+		        		setTimeout(function () { $(".flow-grid-4").animate({ width: "100%" }, 1500); }, 850);} });
+						sr.reveal('.two-arrow-reveal', {origin: 'left', distance: '100px', delay:300, duration:800, scale:1, reset:false, afterReveal: function (domEl) {
+								$(".arrow1").css({ 'width': '0px' });
+								$(".arrow2").css({ 'width': '0px' });
+								setTimeout(function () { $(".arrow1").animate({ width: "100%" }, 1000); }, 50);
+								setTimeout(function () { $(".arrow2").animate({ width: "100%" }, 1500); }, 50);
+								setTimeout(function() { $('.text-1').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 400);
+								setTimeout(function() { $('.text-2').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 800);
+								setTimeout(function() { $('.text-3').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 1200);
+								setTimeout(function() { $('.text-4').css("opacity", 1).css("left", "0%").css("transition", "all 1s linear"); }, 1600);} });
+				</script>
+	</body>
+</html>
+
+		<script type="text/javascript">
+			$(".menu4 a").addClass("current-page");
+		</script>
+		<script type="text/javascript">
+			$(function() {
+      			$(".call-1").click( function()
+           			{
+           				$(".extra-info").fadeOut();
+           					setTimeout(function(){
+             					$(".extra-info").html("(720) 401-2139");
+           						$(".extra-info").fadeIn();
+           					 }, 200);
+          		 	}
+      			);
+      			$(".directions-1").click( function()
+           			{
+           				$(".extra-info").fadeOut();
+           				setTimeout(function(){
+             				$(".extra-info").html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98046.12985275955!2d-105.24101151230008!3d39.83072797203333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b8c8e418a2da1%3A0x50e87882f78614ba!2sPeak+ENT+and+Voice+Center!5e0!3m2!1sen!2suk!4v1467643613485" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>');
+           					$(".extra-info").fadeIn();
+           				}, 200);
+          		 	}
+      			);
+			});
+				$(function() {
+      			$(".call-2").click( function()
+           			{
+           				$(".extra-info2").fadeOut();
+           					setTimeout(function(){
+             					$(".extra-info2").html("(303) 832-0860");
+           						$(".extra-info2").fadeIn();
+           					 }, 200);
+          		 	}
+      			);
+      			$(".directions-2").click( function()
+           			{
+           				$(".extra-info2").fadeOut();
+           				setTimeout(function(){
+             				$(".extra-info2").html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.6911118716534!2d-104.97006223429071!3d39.74658885404528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c79369f5b8127%3A0x4d9619edccf82387!2sPremier+Ent+Head+%26+Neck+Surgery!5e0!3m2!1sen!2suk!4v1467643470160" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>');
+           					$(".extra-info2").fadeIn();
+           				}, 200);
+          		 	}
+      			);
+			});
+		</script>
+	</body>
+</html>
